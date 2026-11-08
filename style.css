@@ -1,0 +1,538 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #111111;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    line-height: 1.6;
+}
+
+h1 {
+    background-color: #000;
+    color: #d4af37;
+    padding: 35px;
+    font-size: 36px;
+}
+
+h2 {
+    color: #d4af37;
+    margin-top: 40px;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 18px;
+    margin: 12px;
+}
+
+.botao {
+    display: inline-block;
+    background-color: #d4af37;
+    color: black;
+    padding: 15px 30px;
+    margin: 25px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: white;
+    transform: scale(1.05);
+}
+
+.servicos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.card {
+    background-color: #222;
+    border: 1px solid #d4af37;
+    border-radius: 12px;
+    padding: 30px;
+    width: 250px;
+    transition: 0.3s;
+}
+
+.card h3 {
+    color: #d4af37;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 5px 20px #d4af3755;
+}
+
+.foto-barbearia {
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.foto-barbearia img {
+    width: 100%;
+    max-width: 700px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+}
+
+.emojis-flutuantes {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.emojis-flutuantes span {
+    position: absolute;
+    bottom: -60px;
+    font-size: 28px;
+    opacity: 0.35;
+    animation: flutuar 12s linear infinite;
+}
+
+.emojis-flutuantes span:nth-child(1) {
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.emojis-flutuantes span:nth-child(2) {
+    left: 20%;
+    animation-delay: -3s;
+}
+
+.emojis-flutuantes span:nth-child(3) {
+    left: 35%;
+    animation-delay: -6s;
+}
+
+.emojis-flutuantes span:nth-child(4) {
+    left: 50%;
+    animation-delay: -9s;
+}
+
+.emojis-flutuantes span:nth-child(5) {
+    left: 65%;
+    animation-delay: -2s;
+}
+
+.emojis-flutuantes span:nth-child(6) {
+    left: 80%;
+    animation-delay: -5s;
+}
+
+.emojis-flutuantes span:nth-child(7) {
+    left: 90%;
+    animation-delay: -8s;
+}
+
+.emojis-flutuantes span:nth-child(8) {
+    left: 45%;
+    animation-delay: -11s;
+}
+
+@keyframes flutuar {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+    }
+}
+
+body > :not(.emojis-flutuantes) {
+    position: relative;
+    z-index: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .emojis-flutuantes span {
+        animation: none;
+        display: none;
+    }
+}
+
+h1 {
+    animation: brilho 3s ease-in-out infinite;
+}
+
+@keyframes brilho {
+    0%, 100% {
+        text-shadow: 0 0 5px #d4af37;
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px #d4af37,
+            0 0 20px #d4af37,
+            0 0 35px #ffd700;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    h1 {
+        animation: none;
+    }
+}
+
+.card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow:
+        0 0 10px #d4af37,
+        0 0 20px #d4af3766;
+    border-color: #ffd700;
+}
+
+.card {
+    animation: aparecer 0.8s ease-out both;
+}
+
+.card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.card:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.card:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+.card:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card {
+        animation: none;
+    }
+}
+
+.menu {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 20px;
+    border-bottom: 2px solid #d4af37;
+}
+
+.menu a {
+    color: #d4af37;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: white;
+    text-shadow: 0 0 12px #ffd700;
+    transform: translateY(-3px);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Galeria de cortes */
+
+.galeria {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 30px;
+}
+
+.galeria img {
+    width: 280px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #d4af37;
+    transition: 0.4s;
+    box-shadow: 0 0 10px #d4af3744;
+}
+
+/* Efeito ao passar o mouse */
+
+.galeria img:hover {
+    transform: scale(1.07);
+    box-shadow: 0 0 25px #d4af37;
+    border-color: #ffd700;
+}
+
+/* Ajuste para celular */
+
+@media (max-width: 600px) {
+    .galeria img {
+        width: 100%;
+        max-width: 350px;
+        height: 280px;
+    }
+}
+
+/* Formulário de agendamento */
+
+#form-agendamento {
+    background-color: #1c1c1c;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 450px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 20px #d4af3733;
+}
+
+#form-agendamento label {
+    color: #d4af37;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#form-agendamento input,
+#form-agendamento select {
+    padding: 12px;
+    border: 1px solid #d4af37;
+    border-radius: 8px;
+    background-color: #111;
+    color: white;
+    font-size: 16px;
+    width: 100%;
+}
+
+#form-agendamento button {
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#form-agendamento button:hover {
+    background-color: #ffd700;
+    transform: scale(1.03);
+}
+
+@media (max-width: 500px) {
+    #form-agendamento {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+}
+
+/* Calendário com ícone branco */
+
+#data {
+    color-scheme: normal;
+    cursor: pointer;
+}
+
+#data::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    opacity: 1;
+    cursor: pointer;
+}
+
+/* Confirmação de agendamento */
+
+.confirmacao {
+    background-color: #1c1c1c;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 450px;
+    margin: 30px auto;
+    text-align: center;
+    box-shadow: 0 0 20px #d4af3755;
+}
+
+.confirmacao[hidden] {
+    display: none;
+}
+
+.confirmacao h2 {
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.confirmacao p {
+    color: white;
+    font-size: 17px;
+    margin: 12px 0;
+}
+
+.confirmacao button {
+    background-color: #d4af37;
+    color: black;
+    border: none;
+    padding: 12px 20px;
+    margin: 10px 5px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.confirmacao button:hover {
+    background-color: #ffd700;
+    transform: scale(1.03);
+}
+
+#cancelar-agendamento {
+    background-color: #444;
+    color: white;
+}
+
+/* LOCALIZAÇÃO E INSTAGRAM */
+
+.localizacao {
+    text-align: center;
+    padding: 50px 20px;
+    background: #111;
+    margin-top: 40px;
+}
+
+.localizacao h2 {
+    color: #d4af37;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.localizacao p {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.redes-sociais {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.botao-rede {
+    background: #d4af37;
+    color: black;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao-rede:hover {
+    background: #ffd700;
+    transform: scale(1.08);
+    box-shadow: 0 0 20px #ffd700;
+}
+
+/* Deixar os efeitos visíveis na seção de localização */
+
+.localizacao {
+    background: transparent;
+    position: relative;
+    z-index: 1;
+}
+
+.emojis-flutuantes {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ENDEREÇO DA EXU'S BARBER */
+
+.endereco-barbearia {
+    background: #1a1a1a;
+    border: 2px solid #d4af37;
+    border-radius: 15px;
+    padding: 25px;
+    max-width: 450px;
+    margin: 35px auto;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    transition: 0.3s ease;
+}
+
+.endereco-barbearia h3 {
+    color: #ffd700;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.endereco-barbearia p {
+    color: white;
+    margin: 10px 0;
+}
+
+.endereco-barbearia small {
+    color: #aaaaaa;
+}
+
+.endereco-barbearia:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+}

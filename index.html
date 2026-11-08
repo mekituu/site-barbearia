@@ -1,0 +1,206 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbearia Imperial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="menu">
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#contato">Contato</a>
+</nav>
+
+<h1 id="inicio">💈 Exu's Barber</h1>
+    <p>Seu estilo começa aqui!</p>
+    
+<div class="emojis-flutuantes">
+    <span>✂️</span>
+    <span>💈</span>
+    <span>🪒</span>
+    <span>✂️</span>
+    <span>💈</span>
+    <span>🪒</span>
+    <span>✂️</span>
+    <span>💈</span>
+</div>
+
+
+<div class="foto-barbearia">
+    <img src="barbearia.jpg" alt="Nossa barbearia">
+</div>
+
+
+<h2 id="servicos">Nossos Serviços</h2>
+
+<div class="servicos">
+
+    <div class="card">
+        <h3>✂️ Corte Masculino</h3>
+        <p>R$ 30,00</p>
+    </div>
+
+    <div class="card">
+        <h3>🪒 Barba</h3>
+        <p>R$ 20,00</p>
+    </div>
+
+    <div class="card">
+        <h3>💈 Corte + Barba</h3>
+        <p>R$ 45,00</p>
+    </div>
+
+<div class="card">
+    <h3>✂️ Corte + Sobrancelha</h3>
+    <p>R$ 45,00</p>
+</div>
+
+<div class="card">
+    <h3>✨ Luzes</h3>
+    <p>R$ 80,00</p>
+</div>
+
+<div class="card">
+    <h3>💇 Alisamento</h3>
+    <p>R$ 80,00</p>
+</div>
+
+<div class="card">
+    <h3>💧 Hidratação</h3>
+    <p>R$ 60,00</p>
+</div>
+
+</div>
+
+
+<section id="galeria">
+    <h2>Galeria de Cortes ✂️</h2>
+
+ 
+<div class="galeria">
+    <img src="corte1.jpg" alt="Corte masculino 1">
+    <img src="corte2.jpg" alt="Corte masculino 2">
+    <img src="corte3.jpg" alt="Corte masculino 3">
+    <img src="corte4.jpg" alt="Corte masculino 4">
+    <img src="corte5.jpg" alt="Corte masculino 5">
+    <img src="corte6.jpg" alt="Corte masculino 6">
+</div>
+
+</section>
+
+
+<h2 id="contato">Agende seu horário 💈</h2>
+
+<form id="form-agendamento">
+
+    <label for="servico">Escolha o serviço:</label>
+
+    <select id="servico" required>
+        <option value="">Selecione um serviço</option>
+        <option>Corte Masculino - R$ 30</option>
+        <option>Barba - R$ 20</option>
+        <option>Corte + Barba - R$ 45</option>
+        <option>Corte + Sobrancelha - R$ 45</option>
+        <option>Luzes - R$ 80</option>
+        <option>Alisamento - R$ 80</option>
+        <option>Hidratação - R$ 60</option>
+    </select>
+
+     <label for="data">Escolha a data:</label>
+     <input type="date" id="data" required>
+
+    <label for="horario">Escolha o horário:</label>
+    <select id="horario" required>
+    <option value="">Selecione um horário</option>
+    <option value="09:00">09:00</option>
+    <option value="10:00">10:00</option>
+    <option value="11:00">11:00</option>
+    <option value="12:00">12:00</option>
+    <option value="13:00">13:00</option>
+    <option value="14:00">14:00</option>
+    <option value="15:00">15:00</option>
+    <option value="16:00">16:00</option>
+    <option value="17:00">17:00</option>
+</select>
+
+
+    <button type="submit">
+        Solicitar Agendamento
+    </button>
+
+</form>
+
+<!-- Confirmação de Agendamento -->
+
+<div id="confirmacao" class="confirmacao" hidden>
+
+    <h2>💈 Confirme seu Agendamento</h2>
+
+    <p id="resumo-servico"></p>
+    <p id="resumo-data"></p>
+    <p id="resumo-horario"></p>
+
+    <button type="button" id="confirmar-whatsapp">
+        Confirmar pelo WhatsApp
+    </button>
+
+    <button type="button" id="cancelar-agendamento">
+        Voltar
+    </button>
+
+</div>
+
+    <p>Entre em contato pelo WhatsApp.</p>
+    
+<a href="https://wa.me/5563981211526"
+   target="_blank"
+   class="botao">
+    Agendar pelo WhatsApp
+</a>
+
+
+<!-- Localização e Instagram -->
+
+<div class="endereco-barbearia">
+    <h3>📍 Nosso Endereço</h3>
+    <p>Rua dos Exu, Quadra 6, Lote 666</p>
+    <p>Araguaína - Tocantins</p>
+    <p>💈 Exu's Barber</p>
+</div>
+<section id="localizacao" class="localizacao">
+
+    <h2>📍 Onde Estamos</h2>
+
+    <p>Venha conhecer a Barbearia Imperial!</p>
+
+    <div class="redes-sociais">
+
+        <a href="https://www.google.com/maps/search/?api=1&query=Rua+dos+Exu+Quadra+6+Lote+666+Araguaina+TO"
+
+           target="_blank"
+           rel="noopener noreferrer"
+           class="botao-rede">
+            📍 Ver Localização
+        </a>
+
+        <a href="https://www.instagram.com/antonyy.png/"
+
+           target="_blank"
+           rel="noopener noreferrer"
+           class="botao-rede">
+            📸 Nosso Instagram
+        </a>
+
+    </div>
+
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
